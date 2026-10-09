@@ -52,5 +52,33 @@ def main():
 
     df['Total_Score'] = df['Math_Score'] + df['Science_Score'] + df['English_Score']
 
+    print()
+    print('========== BASIC ANALYSIS ==========')
+
+    total_number_of_students = df['Student_ID'].count()
+    average_age = df['Age'].mean()
+    minimum_age = df['Age'].min()
+    maximum_age = df['Age'].max()
+    number_of_male_students = df[df['Gender'] == 'Male'].shape[0]
+    number_of_female_students = df[df['Gender'] == 'Female'].shape[0]
+
+    print()
+    print(f'Total number of students: {total_number_of_students}')
+
+    print()
+    print(f'Average age: {average_age}')
+
+    print()
+    print(f'Minimum age: {minimum_age}')
+
+    print()
+    print(f'Maximum age: {maximum_age}')
+
+    print()
+    print(f'Number of male students: {number_of_male_students}')
+
+    print()
+    print(f'Number of female students: {number_of_female_students}')
+
 if __name__ == "__main__":
     main()

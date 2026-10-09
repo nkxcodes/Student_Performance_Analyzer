@@ -116,5 +116,19 @@ def main():
     print()
     print(f'Lowest performing student: {lowest_performing_student}')
 
+    average_scores = pd.Series({
+        'Math': df['Math_Score'].mean(),
+        'Science': df['Science_Score'].mean(),
+        'English': df['English_Score'].mean()
+    })
+
+    highest_average_subject = average_scores.idxmax()
+    lowest_average_subject = average_scores.idxmin()
+
+    print()
+    print(f'Subject with highest average: {highest_average_subject}')
+
+    print()
+    print(f'Subject with lowest average: {lowest_average_subject}')
 if __name__ == "__main__":
     main()

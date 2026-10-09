@@ -164,5 +164,29 @@ def main():
 
     print()
     print(f'Student with lowest attendance: {student_with_lowest_attendance}')
+
+    print()
+    print('========== STUDY-HOURS ANALYSIS ==========')
+
+    average_study_hours = df['Study_Hours'].mean()
+    highest_study_hours = df['Study_Hours'].max()
+    lowest_study_hours = df['Study_Hours'].min()
+    student_studying_the_most = df.loc[df['Study_Hours'].idxmax(), 'Name']
+    student_studying_the_least = df.loc[df['Study_Hours'].idxmin(), 'Name']
+
+    print()
+    print(f'Average study hours: {average_study_hours}')
+
+    print()
+    print(f'Highest study hours: {highest_study_hours}')
+
+    print()
+    print(f'Lowest study hours: {lowest_study_hours}')
+
+    print()
+    print(f'Student studying the most: {student_studying_the_most}')
+
+    print()
+    print(f'Student studying the least: {student_studying_the_least}')
 if __name__ == "__main__":
     main()

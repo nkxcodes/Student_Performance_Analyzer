@@ -214,5 +214,21 @@ def main():
     print(f'Student who completed fewer than 6 assignments: ')
     print()
     print(students_who_completed_fewer_than_6_assignments)
+
+    print()
+    print('========== SLEEP ANALYSIS ==========')
+
+    average_sleep = df['Sleep_Hours'].mean()
+    minimum_sleep = df['Sleep_Hours'].min()
+    maximum_sleep = df['Sleep_Hours'].max()
+
+    print()
+    print(f'Average sleep: {average_sleep}')
+
+    print()
+    print(f'Maximum sleep: {maximum_sleep}')
+
+    print()
+    print(f'Minimum sleep: {minimum_sleep}')
 if __name__ == "__main__":
     main()

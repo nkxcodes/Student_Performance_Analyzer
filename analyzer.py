@@ -130,5 +130,15 @@ def main():
 
     print()
     print(f'Subject with lowest average: {lowest_average_subject}')
+
+    print()
+    print('========== TOP STUDENTS ==========')
+
+    top_5_students = df.head().sort_values('Total_Score', ascending=False)
+
+    print()
+    print('Top 5 Students: ')
+    print()
+    print(top_5_students)
 if __name__ == "__main__":
     main()

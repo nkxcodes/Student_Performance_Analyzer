@@ -50,5 +50,7 @@ def main():
 
     df = df.drop_duplicates()
 
+    df['Total_Score'] = df['Math_Score'] + df['Science_Score'] + df['English_Score']
+
 if __name__ == "__main__":
     main()

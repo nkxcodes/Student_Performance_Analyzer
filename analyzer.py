@@ -39,5 +39,16 @@ def main():
     print()
     print(basic_statistics)
 
+    rows_with_missing_values = df[df.isnull().any(axis=1)]
+    duplicate_ids = df[df['Student_ID'].duplicated(keep=False)]
+
+    print()
+    print(rows_with_missing_values)
+
+    print()
+    print(duplicate_ids)
+
+    df = df.drop_duplicates()
+
 if __name__ == "__main__":
     main()

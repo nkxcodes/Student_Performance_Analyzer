@@ -188,5 +188,31 @@ def main():
 
     print()
     print(f'Student studying the least: {student_studying_the_least}')
+
+    print()
+    print('========== ASSIGNMENT ANALYSIS ==========')
+
+    average_assignments_completed = df['Assignments_Completed'].mean()
+    maximum_assignments_completed = df['Assignments_Completed'].max()
+    minimum_assignments_completed = df['Assignments_Completed'].min()
+    student_completing_the_most_assignments = df.loc[df['Assignments_Completed'].idxmax(), 'Name']
+    students_who_completed_fewer_than_6_assignments = df[df['Assignments_Completed'] < 6]
+
+    print()
+    print(f'Average assigments completed: {average_assignments_completed}')
+
+    print()
+    print(f'Maximum assignments completed: {maximum_assignments_completed}')
+
+    print()
+    print(f'Minimum assignments completed: {minimum_assignments_completed}')
+
+    print()
+    print(f'Student completing the most assignments: {student_completing_the_most_assignments}')
+
+    print()
+    print(f'Student who completed fewer than 6 assignments: ')
+    print()
+    print(students_who_completed_fewer_than_6_assignments)
 if __name__ == "__main__":
     main()

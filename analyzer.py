@@ -140,5 +140,29 @@ def main():
     print('Top 5 Students: ')
     print()
     print(top_5_students)
+
+    print()
+    print('========== ATTENDANCE ANALYSIS ==========')
+
+    average_attendance = df['Attendance'].mean()
+    highest_attendance = df['Attendance'].max()
+    lowest_attendance = df['Attendance'].min()
+    student_with_highest_attendance = df.loc[df['Attendance'].idxmax(), 'Name']
+    student_with_lowest_attendance = df.loc[df['Attendance'].idxmin(), 'Name']
+
+    print()
+    print(f'Average attendance: {average_attendance}')
+
+    print()
+    print(f'Highest attendance: {highest_attendance}')
+
+    print()
+    print(f'Lowest attendance: {lowest_attendance}')
+
+    print()
+    print(f'Student with highest attendance: {student_with_highest_attendance}')
+
+    print()
+    print(f'Student with lowest attendance: {student_with_lowest_attendance}')
 if __name__ == "__main__":
     main()

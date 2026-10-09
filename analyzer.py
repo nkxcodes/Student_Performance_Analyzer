@@ -80,5 +80,41 @@ def main():
     print()
     print(f'Number of female students: {number_of_female_students}')
 
+    print()
+    print('========== ACADEMIC PERFORMANCE ==========')
+
+    average_math_score = df['Math_Score'].mean()
+    average_science_score = df['Science_Score'].mean()
+    average_english_score = df['English_Score'].mean()
+    average_total_score = df['Total_Score'].mean()
+    highest_total_score = df['Total_Score'].max()
+    lowest_total_score = df['Total_Score'].min()
+    top_performing_student = df.loc[df['Total_Score'].idxmax(), 'Name']
+    lowest_performing_student = df.loc[df['Total_Score'].idxmin(), 'Name']
+
+    print()
+    print(f'Average math score: {average_math_score}')
+
+    print()
+    print(f'Average science score: {average_science_score}')
+
+    print()
+    print(f'Average english score: {average_english_score}')
+
+    print()
+    print(f'Average total score: {average_total_score}')
+
+    print()
+    print(f'Highest total score: {highest_total_score}')
+
+    print()
+    print(f'Lowest total score: {lowest_total_score}')
+
+    print()
+    print(f'Top performing student: {top_performing_student}')
+
+    print()
+    print(f'Lowest performing student: {lowest_performing_student}')
+
 if __name__ == "__main__":
     main()
